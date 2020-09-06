@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
 export const LauchMissionInfo = gql`
-  query LaunchProfile($id: String!) {
+  query LauchMissionInfo($id: String!) {
     launch(id: $id) {
       mission_name
       launch_year
