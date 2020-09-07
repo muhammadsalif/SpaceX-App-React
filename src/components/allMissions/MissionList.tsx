@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MissionsInfoQuery } from "./../../generated/graphql";
+import { MissionsInfoQuery } from "../../generated/graphql";
 
 interface Props {
   data: MissionsInfoQuery;
@@ -9,10 +9,11 @@ interface Props {
 const MissionList: React.FC<Props> = ({ data }) => {
   return (
     <div>
+      {console.log("This is all data coming", data)}
       <h2>This is list of lauches</h2>
       {data?.launches?.map((launch, ind) => (
         <button
-          onClick={(e) => console.log(e.target, "Button is clicked")}
+          onClick={() => console.log(launch?.mission_name, "Button is clicked")}
           key={ind}
         >
           {launch?.mission_name}

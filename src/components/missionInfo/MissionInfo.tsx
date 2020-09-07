@@ -10,7 +10,7 @@ const MissionInfo: React.FC<Props> = ({ data }) => {
   console.log("Particular mission data", data);
   return (
     <div>
-      {JSON.stringify(data)}
+      {JSON.stringify(data.launch?.mission_name)}
       {/* <h2>This is list of lauches</h2> */}
       {/* {console.log(data)} */}
     </div>
